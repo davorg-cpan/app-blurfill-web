@@ -1,4 +1,4 @@
-ARG APP_BLURFILL_VERSION=0.0.6
+ARG APP_BLURFILL_VERSION=0.1.0
 FROM davorg/app-blurfill:${APP_BLURFILL_VERSION}
 
 WORKDIR /opt/app-blurfill-web

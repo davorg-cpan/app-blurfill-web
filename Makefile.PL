@@ -8,7 +8,7 @@ WriteMakefile(
     ABSTRACT         => 'Web interface for App::BlurFill',
     MIN_PERL_VERSION => '5.040',
     PREREQ_PM        => {
-        'App::BlurFill' => '0.0.6',
+        'App::BlurFill' => '0.1.0',
         'Dancer2'       => 0,
         'File::Basename'=> 0,
         'File::Copy'    => 0,

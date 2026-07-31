@@ -6,7 +6,7 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
       args:
-        APP_BLURFILL_VERSION: 0.0.6
+        APP_BLURFILL_VERSION: 0.1.0
     ports:
       - "8080:8080"
     restart: unless-stopped

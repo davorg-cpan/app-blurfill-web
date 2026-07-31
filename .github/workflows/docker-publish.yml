@@ -13,7 +13,7 @@ on:
 
 env:
   # Keep this pinned to the minimum App::BlurFill version required by Makefile.PL.
-  CORE_VERSION: "0.0.6"
+  CORE_VERSION: "0.1.0"
   # --- GCP constants (yours) ---
   PROJECT_ID: dave-web-apps
   PROJECT_NUMBER: "764155291719"

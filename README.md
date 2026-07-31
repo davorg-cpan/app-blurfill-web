@@ -22,10 +22,10 @@ Visit <http://localhost:8080/>.
 The web container is layered on the matching `davorg/app-blurfill` image:
 
     docker build \
-      --build-arg APP_BLURFILL_VERSION=0.0.6 \
+      --build-arg APP_BLURFILL_VERSION=0.1.0 \
       -f docker/Dockerfile \
-      -t davorg/app-blurfill-web:0.0.6 .
+      -t davorg/app-blurfill-web:0.1.0 .
 
-    docker run --rm -p 8080:8080 davorg/app-blurfill-web:0.0.6
+    docker run --rm -p 8080:8080 davorg/app-blurfill-web:0.1.0
 
 The hosted demo is available at <https://blurfill.davecross.co.uk/>.
