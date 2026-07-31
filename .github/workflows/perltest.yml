@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        perl: [ '5.40', '5.42' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Install libpng
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpng-dev
+      - name: Run tests
+        uses: PerlToolsTeam/github_workflows/.github/actions/cpan-test@main
+        with:
+          perl_version: ${{ matrix.perl }}
+          os: ubuntu-latest
+
+  coverage:
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-coverage.yml@main
+
+  perlcritic:
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-perlcritic.yml@main
+
+  complexity:
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-complexity.yml@main

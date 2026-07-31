@@ -1,0 +1,8 @@
+App-BlurFill-Web-*.tar.gz
+App-BlurFill-Web-*/
+MYMETA.json
+MYMETA.yml
+Makefile
+blib/
+pm_to_blib
+MANIFEST.bak
